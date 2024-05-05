@@ -13,6 +13,8 @@ spec:
       labels:
         app: jenkins-demo
     spec:
+      imagePullSecrets:
+      - name: harbor-kubernetes
       containers:
       - image: harbor.dfrobot.work/df/jenkins-demo:<BUILD_TAG>
         imagePullPolicy: IfNotPresent
